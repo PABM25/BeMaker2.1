@@ -5,72 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BeMaker</title>
 
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- Estilos externos -->
+    <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="header">
+    <header class="header container">
         <div class="header-logo">
             <img id="logo-image" src="/img/logo/LOGO BEMAKER-16 copy.png" alt="logo BeMaker" />
+            <span class="logo-text">BeMaker</span>
         </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="#">Nuestros Servicios</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Ideas</a></li>
-                <li><a href="#">Atención al Cliente</a></li>
-            </ul>
-        </nav>
-        <button class="header-cta">Comenzar</button>
-        <button id="theme-switch" class="theme-switch-btn">🌙</button>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <div class="header-menu-container" id="header-menu-container">
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">Nuestros Servicios</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Ideas</a></li>
+                    <li><a href="#">Atención al Cliente</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="header-cta btn btn-outline">Comenzar</button>
+            </div>
+        </div>
     </header>
 
     <main>
         <!-- Sección Hero -->
-        <section class="hero-section">
-            <div class="hero-left-panel">
-                <div class="hero-image-card">
-                    <img src="/img/img3.avif" alt="Equipo en una reunión" />
-                </div>
-                <div class="hero-image-card">
-                    <img src="/img/img6.png" alt="Panel de finanzas" />
-                </div>
-                <div class="hero-image-card">
-                    <img src="/img/img2.avif" alt="Equipo en una reunión" />
-                </div>
-            </div>
-
-            <div class="hero-right-panel">
-                <h1 class="hero-title">Innovando hoy para el mañana.</h1>
+        <section class="hero-section container section-padding">
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Innovando hoy <br/><span class="serif-italic text-red">para el mañana.</span></h1>
                 <p class="hero-text">
                     Soluciones web y móviles personalizadas para pequeñas empresas. Optimiza operaciones, llega a más clientes y escala con tecnología diseñada para tus necesidades.
                 </p>
-                <button class="hero-cta">Empieza ahora</button>
+                <div class="hero-actions">
+                    <button class="hero-cta btn btn-primary">Empieza ahora</button>
+                </div>
+            </div>
+
+            <div class="hero-images grid-3 mt-xl">
+                <div class="hero-image-card bento-card">
+                    <img src="/img/img3.avif" alt="Equipo en una reunión" />
+                </div>
+                <div class="hero-image-card bento-card">
+                    <img src="/img/img6.png" alt="Panel de finanzas" />
+                </div>
+                <div class="hero-image-card bento-card">
+                    <img src="/img/img2.avif" alt="Equipo en una reunión" />
+                </div>
             </div>
         </section>
 
         <!-- Sección Expertise -->
-        <section class="expertise-section">
-            <p class="subtitle">Impulsando pioneros digitales</p>
-            <div class="expertise-grid">
-                <div class="expertise-card">
+        <section class="expertise-section container section-padding">
+            <div class="section-header text-center mb-xl">
+                <p class="subtitle badge">Impulsando pioneros digitales</p>
+            </div>
+
+            <div class="expertise-grid bento-grid-4">
+                <div class="expertise-card bento-card">
+                    <div class="icon-glow"></div>
                     <h4>Idea</h4>
                     <p>Una nueva visión o un reto empresarial. Te ayudamos a explorar y definir tu camino.</p>
                 </div>
-                <div class="expertise-card">
+                <div class="expertise-card bento-card">
+                    <div class="icon-glow"></div>
                     <h4>Diseño</h4>
                     <p>Creando interfaces intuitivas y elegantes que cautivan y convierten a tus usuarios.</p>
                 </div>
-                <div class="expertise-card">
+                <div class="expertise-card bento-card">
+                    <div class="icon-glow"></div>
                     <h4>Desarrollo</h4>
                     <p>Llevamos tus ideas a la realidad con código robusto, escalable y seguro.</p>
                 </div>
-                <div class="expertise-card">
+                <div class="expertise-card bento-card">
+                    <div class="icon-glow"></div>
                     <h4>Lanzamiento</h4>
                     <p>Desplegamos tu solución digital y brindamos soporte continuo para tu crecimiento.</p>
                 </div>
@@ -78,38 +93,44 @@
         </section>
 
         <!-- Sección Presencia Digital -->
-        <section class="digital-presence-section">
-            <p class="subtitle">NUESTRA EXPERIENCIA</p>
-            <h1 class="title">Eleva tu presencia digital</h1>
-            <p class="description">
-                Descubre soluciones personalizadas que impulsan el crecimiento y la innovación de tu negocio. Nuestros productos escalables e intuitivos están diseñados para mejorar tu impacto online.
-            </p>
+        <section class="digital-presence-section container section-padding">
+            <div class="section-header text-center mb-xl">
+                <p class="subtitle badge">NUESTRA EXPERIENCIA</p>
+                <h1 class="title">Eleva tu presencia <span class="serif-italic text-red">digital</span></h1>
+                <p class="description">
+                    Descubre soluciones personalizadas que impulsan el crecimiento y la innovación de tu negocio. Nuestros productos escalables e intuitivos están diseñados para mejorar tu impacto online.
+                </p>
+            </div>
 
-            <div class="content-grid">
-                <div class="image-box">
-                    <img src="/img/img2.avif" alt="Reunión de equipo" />
-                </div>
-                <div class="text-box">
+            <div class="content-grid bento-grid-2 mb-xl">
+                <div class="text-box bento-card p-xl flex-col-center">
                     <h3>Sesiones estratégicas</h3>
                     <p>Consultorías personalizadas para descubrir nuevas oportunidades y planificar tu camino digital.</p>
-                    <a href="#" class="cta-button">Comenzar</a>
+                    <a href="#" class="cta-button btn btn-outline mt-md">Comenzar</a>
+                </div>
+                <div class="image-box bento-card p-0">
+                    <img src="/img/img2.avif" alt="Reunión de equipo" />
                 </div>
             </div>
 
-            <div class="services-section">
-                <div class="service-card">
+            <div class="services-section bento-grid-4">
+                <div class="service-card bento-card">
+                    <div class="icon-glow"></div>
                     <h4>Desarrollo web</h4>
                     <p>Creación de sitios rápidos y seguros que impulsan la expansión online de tu negocio.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card bento-card">
+                    <div class="icon-glow"></div>
                     <h4>Aplicaciones móviles</h4>
                     <p>Experiencias móviles fluidas para iOS y Android, manteniéndote conectado con tu audiencia.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card bento-card">
+                    <div class="icon-glow"></div>
                     <h4>Comercio electrónico</h4>
                     <p>Compras online sencillas con sistemas de pago seguros para ampliar tu alcance.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card bento-card">
+                    <div class="icon-glow"></div>
                     <h4>Consultoría</h4>
                     <p>Asesoría experta para alinear tu estrategia digital con los objetivos de tu negocio.</p>
                 </div>
@@ -117,7 +138,6 @@
         </section>
     </main>
 
-    <!-- Script externo -->
     <script src="script.js"></script>
 </body>
 </html>
